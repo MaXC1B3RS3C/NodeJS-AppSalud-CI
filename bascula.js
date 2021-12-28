@@ -71,7 +71,16 @@ class Bascula {
         console.log(this.contador);
     }
     obtenerTablaPesosHTML() {
-
+        let arr=[];
+        let table=[];
+        arr = this.pesos;
+        var arrayLength = arr.length;
+        var html;
+        html='<!Doctype><html><html lang="es"><head><meta charset="utf-8"/>';
+        for (var i = 0; i < arrayLength; i++) {
+            table+=html+"<table border=1><tr><td>Peso"+(i+1)+":"+arr[i]+"<tr></td></table";
+        }
+        return table
     }
      
     obtenerServidorPesosHTML(){
@@ -143,6 +152,7 @@ function runner_bascula_actual(){
     basculaActual.obtenerNumeroAnotaciones();
     basculaActual.calcularIMC();
     basculaActual.describirIMC();    
+    //Para obtener la tabla en pesos en HTML
     basculaActual.obtenerTablaPesosHTML();
     //Para poner en produccion un servidor http
     basculaActual.obtenerServidorPesosHTML();
@@ -151,7 +161,7 @@ function runner_bascula_actual(){
 
 }
 
-//Creare el objeto basculaActual que sera para probar la clase Bascula
+//Creare el objeto basculaActual que sera para probar la clase Bascula, llamando a la funcion
 generar_basculaActual();   
-//Ejecuto funcion runner_bascula_actual(); que sera para probar la clase Bascula
+//Ejecuto funcion runner_bascula_actual(); que sera para probar la clase Bascula, llamando a la funcion
 runner_bascula_actual();
