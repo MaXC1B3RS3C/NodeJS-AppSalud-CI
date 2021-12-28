@@ -96,15 +96,17 @@ class Bascula {
        //     response.end(`{"message": "This is a test JSON response"}`);
         //};
         const server = http.createServer(onRequest);
-        let html_result;       
         // Configurar una respuesta HTTP para todas las peticiones
         function onRequest(request, response) {
             console.log("Peticion Recibida.");
             response.writeHead(200, {"Content-Type": "text/html"});
             response.write("PESOS:");
             var res;
+            var imc;
             res=basculaActual.obtenerTablaPesosHTML();
+            imc=basculaActual.calcularIMC();
             response.write(res);
+            response.write("<tr><td>Ultimo IMC:"+imc);
             response.end();
         }
 
@@ -114,9 +116,7 @@ class Bascula {
         console.log("*El servidor HTTP se debería está ejecutando en http://localhost:3000/");
         console.log("**El servidor HTTP se debería estar ejecutando en http://127.0.0.1:3000/");
 
-        });        // Poner un mensaje en la consola
-    
-                    // Activates this server, listening on port 8080.
+        });        // Poner un mensaje en la consola    
     }
     modificarBascula(){
         this.registrosBascula = this.contador;
@@ -126,9 +126,18 @@ class Bascula {
         console.log(basculaActual);
     }
 
-    calcularIMC(){}
-    describirIMC(){}
-    static describirIMC(){}
+    calcularIMC(){
+        
+        this.imc=this.peso/(this.altura*this.altura);
+        return (this.imc)
+    }
+    describirIMC(){
+        
+        console.log(this.imc)
+    }
+    static describirIMC(){     
+        console.log(this.imc)
+    }
     
     
 }
