@@ -1,10 +1,7 @@
-var mocha = require('mocha')
-var describe = mocha.describe
-var it = mocha.it
-var assert = require('chai').assert
+bascula = require('./../bascula.js')
+const assert = require('assert')
 
-describe('#indexOf()', function() {
-  it('should return -1 when not present', function() {
-    assert.equal([1,2,3].indexOf(4), -1)
-  })
+it('Correctly calls to bascula', () => {
+bascula.describirIMC();
+
 })

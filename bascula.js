@@ -1,67 +1,157 @@
+const { create } = require('domain');
 
 class Bascula {
     constructor() {
-        this.id_anotacion = [];
         this.pesos=[];
         this.alturas=[];
-        this.fechas=[];      
+        this.fechas=[];
+        this.contador='';
+        this.registrosBascula=0;        
+        this.cero=0;        
     }
-    * [Symbol.iterator]() {
-        for (let pos of this.id_anotacion) {
-            yield pos;
-        }
-    }
-    * [Symbol.iterator]() {
-        for (let pos of this.pesos) {
-            yield pos;
-        }
-    }
-    * [Symbol.iterator]() {
-        for (let pos of this.alturas) {
-            yield pos;
-        }
-    }
-    * [Symbol.iterator]() {
-        for (let pos of this.fechas) {
-            yield pos;
-        }
-    }
-    anotarPeso(peso, altura, id_anotacion,fecha){
-        this.id_anotacion=id_anotacion +1;
+
+    anotarPeso(peso,altura,fecha){   
         this.peso=peso;
         this.altura=altura;
-        this.fecha=fecha;
+        this.registrosBascula++;
+        this.contador=this.registrosBascula;
+        this.alturas.push(altura);
+        this.fechas.push(fecha);        
+        this.pesos.push(peso);       
+    }     
+    saludar(){
+        console.log("---------------------------------------")
+
+        console.log("Hola soy la bascula de appSalud.")
+        console.log("--------- NUEVA PESADA ----------------")
+        console.log(this.peso);
+        console.log("KG.")
+        console.log("---------------------------------------")
+        console.log("Cantidad de pesadas anotadas:")
+        console.log(this.contador)
+
+    } 
+
+    getArrayMax(){
+        return Math.max.apply(null, this.arr);
     }
     obtenerPesoMaximo(){
-        return Math.max(pesos)
-        //return Math.max(pesos)
+    
+        console.log("PESO MÁXIMO>");
+        console.log("El contador és: ", this.contador);    
+        this.arr=[];
+        this.arr=this.pesos;
+        let max=basculaActual.getArrayMax(this.arr); //11         
+        console.log("El peso maximo és:  ",max);      
+        //return Math.max(this.pesos);
+
+    }
+    getArrayMin(){
+        return Math.min.apply(null, this.arr);
     }
     obtenerPesoMinimo(){
-        return Math.min(pesos)
+        console.log("PESO MÍNIMO>");
+        console.log("El contador és: ", this.contador);    
+        this.arr=[];
+        this.arr=this.pesos;
+        let min=basculaActual.getArrayMin(this.arr); //11         
+        console.log("El peso mínimo és:  ",min);      
+        //return Math.max(this.pesoss);
     }
     obtenerPesoMedio(){
-        return Math.round(pesos)
+        console.log("PESO MEDIO>");
+        var arr=[]
+        arr=this.pesos;
+        var avg = arr.reduce(function(p,c,i,a){return p + (c/a.length)},0);
+        console.log("El contador és: ", this.contador);    
+        console.log("La media és:  ",avg);      
     }
-    obtenerNumeroAnotaciones(id_anotacion){
-        return id_anotacion.length
+    obtenerNumeroAnotaciones(){
+        console.log("Cantidad de anotaciones:")
+        console.log(this.contador);
     }
-    obtenerTablaPesosHTML(){
-        HTML="<!Doctype><html></html><script>"
-        for (peso in pesos){
-            HTML=HTML+peso+"</script>";
+    obtenerTablaPesosHTML() {
+
+    }
+     
+    obtenerServidorPesosHTML(){
+        
+        // Cargar el modulo HTTP
+        const http = require('http');
+
+        const host = '127.0.0.1';
+        const port = 3000;
+
+        //const requestListener = function (request, response) {
+       //     response.setHeader(200, {"Content-Type": "text/html"});
+       //     response.end(`{"message": "This is a test JSON response"}`);
+        //};
+        const server = http.createServer(onRequest);
+        let html_result;       
+        // Configurar una respuesta HTTP para todas las peticiones
+        function onRequest(request, response) {
+            console.log("Peticion Recibida.");
+            response.writeHead(200, {"Content-Type": "text/html"});
+            response.write("PESOS:");
+            var res;
+            res=basculaActual.obtenerTablaPesosHTML();
+            response.write(res);
+            response.end();
         }
-        return HTML
+
+       // Escuchar al puerto 3000 creo otro falla por firewall o puertos por  defecto
+       server.listen(port, host, () => {
+        console.log(`El servidor HTTP se está ejecutando en http://${host}:${port}`);
+        console.log("*El servidor HTTP se debería está ejecutando en http://localhost:3000/");
+        console.log("**El servidor HTTP se debería estar ejecutando en http://127.0.0.1:3000/");
+
+        });        // Poner un mensaje en la consola
+    
+                    // Activates this server, listening on port 8080.
     }
-    calcularIMC(){
-        imc= peso/(altura*altura);
+    modificarBascula(){
+        this.registrosBascula = this.contador;
     }
-    describirIMC(){
-        console.log(imc)
+    obtenerBascula(){
+        console.log("BasculaActual>")
+        console.log(basculaActual);
     }
-    static describirIMC(imc){
-        return imc
-    }
+
+    calcularIMC(){}
+    describirIMC(){}
+    static describirIMC(){}
+    
+    
+}
+
+//Testeo el objeto/clase bascula con 2 funciones
+function generar_basculaActual(){
+    basculaActual=new Object(new Bascula()); 
+}
+function runner_bascula_actual(){
+    basculaActual.anotarPeso(88,1.85,'20/12/2021');
+    basculaActual.saludar();
+    basculaActual.anotarPeso(86,1.82,'5/12/2021');
+    basculaActual.saludar();
+    basculaActual.anotarPeso(85,1.83,'7/12/2021');
+    basculaActual.saludar();
+    basculaActual.anotarPeso(3,1.84,'10/12/2021');
+    basculaActual.saludar();
+    basculaActual.obtenerPesoMaximo();
+    basculaActual.obtenerPesoMinimo();
+    basculaActual.obtenerPesoMedio();
+    basculaActual.obtenerNumeroAnotaciones();
+    basculaActual.calcularIMC();
+    basculaActual.describirIMC();    
+    basculaActual.obtenerTablaPesosHTML();
+    //Para poner en produccion un servidor http
+    basculaActual.obtenerServidorPesosHTML();
+    basculaActual.obtenerBascula();
+    basculaActual.modificarBascula();
 
 }
 
- basculaActual= new Bascula('0','88','1.85','20/12/2021');
+//Creare el objeto basculaActual que sera para probar la clase Bascula
+generar_basculaActual();   
+//Ejecuto funcion runner_bascula_actual(); que sera para probar la clase Bascula
+runner_bascula_actual();

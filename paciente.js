@@ -3,13 +3,15 @@ class Paciente{
         this.nombres=[]
         this.apellidos=[]
         this.fechaNacimiento=[]
-        this.registroBascula= []
+        this.contador='';
+        this.inicializador_contador=0;        
+
     }    
     saludar(){
-        console.log("Hi"+this.nombre+this.apellidos+"Welcome to the App")
+        console.log("Hi"+this.nombre+this.apellidos+"Welcome to the App"+ this)
     }
     obtenerNombre(){
-        return this.nombre        
+        return this.nombres       
     }
     obtenerApellidos(){
         return this.apellidos

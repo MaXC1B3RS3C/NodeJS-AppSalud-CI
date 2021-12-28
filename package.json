@@ -4,7 +4,7 @@
   "description": "Aplicació de appsalud per a posada i producció segura",
   "main": "appSalud/bascula.js",
   "scripts": {
-    "test": "mocha appSalud/bascula.spec.js appSalud/paciente.spec.js appSalud/bascula.js appSalud/paciente.js"
+    "test": "mocha tests/*.spec.js"
   },
   "repository": {
     "type": "git",
@@ -16,10 +16,11 @@
     "url": "https://github.com/MaXC1B3RS3C/NodeJS-AppSalud/issues"
   },
   "homepage": "https://github.com/MaXC1B3RS3C/NodeJS-AppSalud#readme",
-  "dependencies": {
+  "devDependencies": {
+    "chai": "^4.3.4",
     "mocha": "^9.1.3"
   },
-  "devDependencies": {
-    "chai": "^4.3.4"
+  "directories": {
+    "test": "tests"
   }
 }

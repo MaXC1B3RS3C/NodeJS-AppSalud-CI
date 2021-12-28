@@ -1,10 +1,20 @@
-var mocha = require('mocha')
-var describe = mocha.describe
-var it = mocha.it
-var assert = require('chai').assert
+paciente = require('./../paciente.js')
 
-describe('#indexOf()', function() {
-  it('should return -1 when not present', function() {
-    assert.equal([1,2,3].indexOf(4), -1)
-  })
-})
+var chai = require('chai');
+var assert = chai.assert;
+
+var className = require('../paciente.js');
+var addClass = className.addClass;
+
+// The rest of the file remains the same
+describe('addClass', function() {
+  it('should add class to element', function() {
+    var element = { className: '' };
+
+    addClass(element, 'test-class');
+
+    assert.equal(element.className, 'test-class');
+  });
+
+  it('should not add a class which already exists');
+});
