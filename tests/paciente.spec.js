@@ -35,9 +35,88 @@ describe('-Generic test Paciente class', function() {
       it('*debería devolver -1 cuando se ejecutó la funcion obtentenerEdad() de Paciente', function() {
       })
     });
+    describe('#Funcion obtentenerEdad()', function() {
+      pacienteTest.obtentenerEdad();
+      it('*debería devolver -1 cuando se ejecutó la funcion obtentenerEdad() de Paciente', function() {
+      })
+    });
+    describe('#Funcion saludar()', function() {
+      pacienteTest.saludar();
+      it('*debería devolver -1 cuando se ejecutó la funcion saludar() de Paciente', function() {
+      })
+    });
+    describe('#Funcion obtenerNombre()', function() {
+      pacienteTest.obtenerNombre();
+      it('*debería devolver -1 cuando se ejecutó la funcion obtenerNombre() de Paciente', function() {
+      })
+    });
+    describe('#Funcion obtenerNombres()', function() {
+      pacienteTest.obtenerNombres();
+      it('*debería devolver -1 cuando se ejecutó la funcion obtenerNombres() de Paciente', function() {
+      })
+    });
+    describe('#Funcion obtenerApellido()', function() {
+      pacienteTest.obtenerApellido();
+      it('*debería devolver -1 cuando se ejecutó la funcion obtenerApellido() de Paciente', function() {
+      })
+    });
+    describe('#Funcion obtenerApellidos()', function() {
+      pacienteTest.obtenerApellidos();
+      it('*debería devolver -1 cuando se ejecutó la funcion obtenerApellidos() de Paciente', function() {
+      })
+    });
+    describe('#Funcion modificarNombre()', function() {
+      pacienteTest.modificarNombre();
+      it('*debería devolver -1 cuando se ejecutó la funcion modificarNombre() de Paciente', function() {
+      })
+    });
+    describe('#Funcion obtenerPesos()', function() {
+      pacienteTest.obtenerPesos();
+      it('*debería devolver -1 cuando se ejecutó la funcion obtenerPesos() de Paciente', function() {
+      })
+    });
+    describe('#Funcion modificarApellido()', function() {
+      pacienteTest.modificarApellido();
+      it('*debería devolver -1 cuando se ejecutó la funcion modificarApellido() de Paciente', function() {
+      })
+    });
+    describe('#Funcion modificarApellidos()', function() {
+      pacienteTest.modificarApellidos();
+      it('*debería devolver -1 cuando se ejecutó la funcion modificarApellidos() de Paciente', function() {
+      })
+    });
+    describe('#Funcion obtenerFechaNacimiento()', function() {
+      pacienteTest.obtenerFechaNacimiento();
+      it('*debería devolver -1 cuando se ejecutó la funcion obtenerFechaNacimiento() de Paciente', function() {
+      })
+    });
+    describe('#Funcion modificarFechaNacimiento()', function() {
+      pacienteTest.modificarFechaNacimiento();
+      it('*debería devolver -1 cuando se ejecutó la funcion modificarFechaNacimiento() de Paciente', function() {
+      })
+    });
 
-
-
+    describe('#Funcion obtentenerEdades()', function() {
+      pacienteTest.obtentenerEdades();
+      it('*debería devolver -1 cuando se ejecutó la funcion obtentenerEdades() de Paciente', function() {
+      })
+    });
+    describe('#Funcion modificarPaciente()', function() {
+      pacienteTest.modificarPaciente();
+      it('*debería devolver -1 cuando se ejecutó la funcion modificarPaciente() de Paciente', function() {
+      })
+    });
+    describe('#Funcion obtenerPaciente()', function() {
+      pacienteTest.obtenerPaciente();
+      it('*debería devolver -1 cuando se ejecutó la funcion modificarPaciente() de Paciente', function() {
+      })
+    });
+    describe('#Funcion calcularIMC()', function() {
+      pacienteTest.calcularIMC();
+      it('*debería devolver -1 cuando se ejecutó la funcion calcularIMC() de Paciente', function() {
+      })
+    });
+    
 });
 });
 

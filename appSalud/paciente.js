@@ -81,10 +81,6 @@ class Paciente{
     modificarNombre(nombre){
         this.nombres_pacientes.push(nombre);
     }
-    obtenerApellidos(){
-        return this.apellidos;
-    }
-
     obtenerPesos(){
         return this.pesos       
     }
