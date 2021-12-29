@@ -39,7 +39,7 @@ build/Release
 
 # Dependency directories
 # Si comento esta línea el directorio node_modules del repositorio de mocha chai no se incluye en el proyecto segun .gitignore
-# node_modules/
+#node_modules/
 jspm_packages/
 
 # TypeScript v1 declaration files
