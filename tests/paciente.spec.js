@@ -1,20 +1,33 @@
-paciente = require('./../paciente.js')
+var mocha = require('mocha')
+var describe = mocha.describe
+var it = mocha.it
+var assert = require('chai').assert
+paciente = require("../appSalud/paciente.js")
+class Paciente{} require("../appSalud/paciente.js");
 
-var chai = require('chai');
-var assert = chai.assert;
+describe('#Iniciando los tests... #Testfile:paciente.spec.js', function() {
+  it('debería devolver -1 cuando inicio sin ningún problema', function() {
+    assert.equal([1,2,3].indexOf(4), -1)
+    
+  })
+}
+)
 
-var className = require('../paciente.js');
-var addClass = className.addClass;
 
-// The rest of the file remains the same
-describe('addClass', function() {
-  it('should add class to element', function() {
-    var element = { className: '' };
+describe('-Generic test Paciente class', function() {
+  // variable Bascula does NOT exist in this context.
 
-    addClass(element, 'test-class');
-
-    assert.equal(element.className, 'test-class');
+  describe('-Paciente class constructor', function() {
+    //Genero una bascula llamada basculaTest
+    const pacienteTest = new Paciente;
+    it('*debería devolver -1 cuando se generó el paciente', function() {      
+    })
+      describe('Paciente Runner', function() {
+          it('*debería devolver -1 cuando se ejecutó la funcion runner de Paciente', function() {
+              pacienteTest.runner_bascula_actual;
+          })
+        });
   });
-
-  it('should not add a class which already exists');
 });
+
+  

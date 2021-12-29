@@ -4,6 +4,7 @@
   "description": "Aplicació de appsalud per a posada i producció segura",
   "main": "appSalud/bascula.js",
   "scripts": {
+    "description": "Línea per als tests de mocha chai",
     "test": "mocha tests/*.spec.js"
   },
   "repository": {

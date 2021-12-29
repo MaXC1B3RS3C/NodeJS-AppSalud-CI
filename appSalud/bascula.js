@@ -1,5 +1,3 @@
-const { create } = require('domain');
-
 class Bascula {
     constructor() {
         this.pesos=[];
@@ -7,7 +5,6 @@ class Bascula {
         this.fechas=[];
         this.contador='';
         this.registrosBascula=0;        
-        this.cero=0;        
     }
 
     anotarPeso(peso,altura,fecha){   
@@ -113,7 +110,7 @@ class Bascula {
        // Escuchar al puerto 3000 creo otro falla por firewall o puertos por  defecto
        server.listen(port, host, () => {
         console.log(`El servidor HTTP se está ejecutando en http://${host}:${port}`);
-        console.log("*El servidor HTTP se debería está ejecutando en http://localhost:3000/");
+        console.log("*El servidor HTTP se debería estár ejecutando en http://localhost:3000/");
         console.log("**El servidor HTTP se debería estar ejecutando en http://127.0.0.1:3000/");
 
         });        // Poner un mensaje en la consola    
@@ -138,14 +135,11 @@ class Bascula {
     static describirIMC(){     
         console.log(this.imc)
     }
-    
-    
+
+  
+
 }
 
-//Testeo el objeto/clase bascula con 2 funciones
-function generar_basculaActual(){
-    basculaActual=new Object(new Bascula()); 
-}
 function runner_bascula_actual(){
     basculaActual.anotarPeso(88,1.85,'20/12/2021');
     basculaActual.saludar();
@@ -161,16 +155,20 @@ function runner_bascula_actual(){
     basculaActual.obtenerNumeroAnotaciones();
     basculaActual.calcularIMC();
     basculaActual.describirIMC();    
-    //Para obtener la tabla en pesos en HTML
+    //Para obtener la tabla en pesos en HTML  descomentaría esta línea
     basculaActual.obtenerTablaPesosHTML();
-    //Para poner en produccion un servidor http
-    basculaActual.obtenerServidorPesosHTML();
+    //Para poner en produccion un servidor http se descomentaría esta línea
+    //basculaActual.obtenerServidorPesosHTML();
     basculaActual.obtenerBascula();
     basculaActual.modificarBascula();
 
 }
+exports.Bascula = Bascula
 
-//Creare el objeto basculaActual que sera para probar la clase Bascula, llamando a la funcion
-generar_basculaActual();   
-//Ejecuto funcion runner_bascula_actual(); que sera para probar la clase Bascula, llamando a la funcion
-runner_bascula_actual();
+//Creare el objeto basculaActual que servirá para realizar pruebas
+
+basculaActual = new Bascula;
+
+//Creare el la funcion runner_bascula_actual();   
+//que sera para probar la clase Bascula, llamando a la funcion
+runner_bascula_actual();   
