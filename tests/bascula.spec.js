@@ -55,65 +55,65 @@ describe('-Generic test Bascula class', function() {
     describe('#Bascula funcion saludar()', function() {
       basculaTest.saludar();
 
-        it('retorna -1 cuando se ejecutó la funcion saludar() de Bascula,\n        No tiene parametros, es una funcion sin argumentos,\n        Descomentar si quieres que la funcion se ejecute en el test', function() {
+        it('retorna -1 cuando se ejecutó la funcion saludar() de Bascula', function() {
               //Descomentar/comentar si quieres que la funcion se ejecute en el test
               })
     });
     describe('#Bascula funcion obtenerPesoMaximo()', function() {
       basculaTest.obtenerPesoMaximo();
-      it('retorna -1 cuando se ejecutó la funcion obtenerPesoMaximo() de Bascula,\n        Descomentar si quieres que la funcion se ejecute en el test,\n         No tiene parametros, es una funcion sin argumentos', function() {
+      it('retorna -1 cuando se ejecutó la funcion obtenerPesoMaximo() de Bascula', function() {
            //Esto solo sirve para testear si la funcion del metodo web es correcto
       })    
     });   
     describe('#Bascula funcion obtenerPesoMinimo()', function() {
       basculaTest.obtenerPesoMinimo();
-      it('retorna -1 cuando se ejecutó la funcion saludar() de Bascula,\n        Descomentar si quieres que la funcion se ejecute en el test,\n        No tiene parametros, es una funcion sin argumentos', function() {
+      it('retorna -1 cuando se ejecutó la funcion saludar() de Bascula', function() {
             //Descomentar/comentar si quieres que la funcion se ejecute en el test
             })
     });
     describe('#Bascula funcion obtenerPesoMedio()', function() {
       basculaTest.obtenerPesoMinimo();
-      it('retorna -1 cuando se ejecutó la funcion obtenerPesoMedio() de Bascula,\n        Descomentar si quieres que la funcion se ejecute en el test,\n        No tiene parametros, es una funcion sin argumentos', function() {
+      it('retorna -1 cuando se ejecutó la funcion obtenerPesoMedio() de Bascula', function() {
             //Descomentar/comentar si quieres que la funcion se ejecute en el test
             })
     });
     describe('#Bascula funcion obtenerPesoMinimo()', function() {
       basculaTest.obtenerPesoMinimo();
 
-      it('retorna -1 cuando se ejecutó la funcion saludar() de Bascula,\n        Descomentar si quieres que la funcion se ejecute en el test,\n        No tiene parametros, es una funcion sin argumentos', function() {
+      it('retorna -1 cuando se ejecutó la funcion saludar() de Bascula', function() {
             //Descomentar/comentar si quieres que la funcion se ejecute en el test
             })
     });
     describe('#Bascula funcion obtenerNumeroAnotaciones()', function() {
       basculaTest.obtenerNumeroAnotaciones();
 
-      it('retorna -1 cuando se ejecutó la funcion obtenerNumeroAnotaciones() de Bascula,\n        Descomentar si quieres que la funcion se ejecute en el test,\n        No tiene parametros, es una funcion sin argumentos', function() {
+      it('retorna -1 cuando se ejecutó la funcion obtenerNumeroAnotaciones() de Bascula', function() {
             //Descomentar/comentar si quieres que la funcion se ejecute en el test
             })
     });
     describe('#Bascula funcion  modificarBascula()', function() {
       basculaTest.modificarBascula();
 
-      it('retorna -1 cuando se ejecutó la funcion  modificarBascula() de Bascula,\n        Descomentar si quieres que la funcion se ejecute en el test,\n        No tiene parametros, es una funcion sin argumentos', function() {
+      it('retorna -1 cuando se ejecutó la funcion  modificarBascula() de Bascula', function() {
             //Descomentar/comentar si quieres que la funcion se ejecute en el test
             })
     });
     describe('#Bascula funcion  obtenerBascula()', function() {
       basculaTest.obtenerBascula();
 
-      it('retorna -1 cuando se ejecutó la funcion  modificarBascula() de Bascula,\n        Descomentar si quieres que la funcion se ejecute en el test,\n        No tiene parametros, es una funcion sin argumentos', function() {
+      it('retorna -1 cuando se ejecutó la funcion  obtenerBascula() de Bascula', function() {
             //Descomentar/comentar si quieres que la funcion se ejecute en el test
             })
     });
     describe('#Bascula funcion  calcularIMC()', function() {
       basculaTest.calcularIMC();
-      it('retorna -1 cuando se ejecutó la funcion  calcularIMC() de Bascula,\n        Descomentar si quieres que la funcion se ejecute en el test,\n        No tiene parametros, es una funcion sin argumentos', function() {
+      it('retorna -1 cuando se ejecutó la funcion  calcularIMC() de Bascula', function() {
             //Descomentar/comentar si quieres que la funcion se ejecute en el test
             })
     });
     describe('#Bascula funcion  describirIMC()', function() {
       basculaTest.describirIMC();
-      it('retorna -1 cuando se ejecutó la funcion  describirIMC() de Bascula,\n        Descomentar si quieres que la funcion se ejecute en el test,\n        No tiene parametros, es una funcion sin argumentos', function() {
+      it('retorna -1 cuando se ejecutó la funcion  describirIMC() de Bascula', function() {
             //Descomentar/comentar si quieres que la funcion se ejecute en el test
             })
     });
