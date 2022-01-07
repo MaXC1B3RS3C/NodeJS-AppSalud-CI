@@ -7,7 +7,7 @@
     "description": "Línea per als tests de mocha chai",
     "test": "mocha tests/*.spec.js"
   },
-  "scripts": {
+  "script": {
     "description": "Línea per als tests de unitaris mochawesome",
     "test": "mocha test/unitarias test/integracion --reporter mochawesome"
   }, 
