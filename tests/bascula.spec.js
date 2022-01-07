@@ -6,6 +6,7 @@ var it = mocha.it
 var assert = require('chai').assert
 var expect = require('chai').expect;
 
+
 const Bascula = require('../appSalud/bascula.js').Bascula;
 describe('#Iniciando conjunto de tests.  # All mocha testfiles in tests/ directory:bascula.spec.js, paciente.spec.js, termometro.spec.js #Ejecutando los test preparados....', function() {
   it('debería devolver -1 cuando inicio sin ningún problema', function() {

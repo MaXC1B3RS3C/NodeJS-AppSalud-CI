@@ -1,4 +1,5 @@
 class Paciente{
+    //Descomentar console logs para ver resultados
     constructor(){
         this.nombres_pacientes=[]
         this.apellidos_pacientes=[]
@@ -145,6 +146,6 @@ exports.Paciente = Paciente
 //Creare el objeto pacienteActual que servirá para realizar pruebas
 pacienteActual = new Paciente;
 
-//Creare el la funcion runner_paciente_actual();   
+//Creare la funcion runner_paciente_actual();   
 //que sera para probar la clase Paciente, llamando a la funcion
 runner_paciente_actual();   

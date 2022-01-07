@@ -1,4 +1,5 @@
 class Termometro {
+    //Descomentar console logs para ver resultados
     constructor() {
         this.temperaturas=[];
         this.fechas=[];
@@ -154,17 +155,17 @@ function runner_termometro_actual(){
    //Para obtener la tabla en pesos en HTML  descomentaría esta línea
    termometroActual.obtenerTablaTemperaturasHTML();
     //Para poner en produccion un servidor http se descomentaría esta línea
-    //basculaActual.obtenerTablaTemperaturasHTML();
+    //termometroActual.obtenerTablaTemperaturasHTML();
    termometroActual.obtenerTermometro();
    termometroActual.modificarTermometro();
 
 }
 exports.Termometro = Termometro
 
-//Creare el objeto basculaActual que servirá para realizar pruebas
+//Creare el objeto termometroActual que servirá para realizar pruebas
 
 termometroActual = new Termometro;
 
-//Creare el la funcion runner_bascula_actual();   
-//que sera para probar la clase Bascula, llamando a la funcion
+//Creare la funcion runner_termometro_actual();   
+//que sera para probar la clase Termometro, llamando a la funcion
 runner_termometro_actual();   

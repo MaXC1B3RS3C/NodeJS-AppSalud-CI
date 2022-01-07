@@ -1,4 +1,5 @@
 class Bascula {
+    //Descomentar console logs para ver resultados
     constructor() {
         this.pesos=[];
         this.alturas=[];
@@ -174,6 +175,6 @@ exports.Bascula = Bascula
 
 basculaActual = new Bascula;
 
-//Creare el la funcion runner_bascula_actual();   
+//Creare la funcion runner_bascula_actual();   
 //que sera para probar la clase Bascula, llamando a la funcion
 runner_bascula_actual();   

@@ -1,7 +1,11 @@
+'use strict';
+
 var mocha = require('mocha')
 var describe = mocha.describe
 var it = mocha.it
 var assert = require('chai').assert
+var expect = require('chai').expect;
+
 const Paciente = require('../appSalud/paciente.js').Paciente;
 
 describe('#Iniciando los tests... #Testfile:paciente.spec.js #Ejecutando los test preparados....', function() {
