@@ -7,6 +7,10 @@
     "description": "Línea per als tests de mocha chai",
     "test": "mocha tests/*.spec.js"
   },
+  "script": {
+    "description": "Línea per als tests de unitaris mochawesome",
+    "test": "mocha test/unitarias test/integracion --reporter mochawesome"
+  }, 
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MaXC1B3RS3C/NodeJS-AppSalud.git"
