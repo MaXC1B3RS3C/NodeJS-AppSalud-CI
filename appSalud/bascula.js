@@ -40,7 +40,7 @@ class Bascula {
         this.arr=this.pesos;
         let max=basculaActual.getArrayMax(this.arr); //11         
         //console.log("El peso maximo és:  ",max);      
-        //return Math.max(this.pesos);
+        return (max);
 
     }
     getArrayMin(){
@@ -53,7 +53,7 @@ class Bascula {
         this.arr=this.pesos;
         let min=basculaActual.getArrayMin(this.arr); //11         
         //console.log("El peso mínimo és:  ",min);      
-        //return Math.max(this.pesoss);
+        return (min);
     }
     obtenerPesoMedio(){
         //console.log("PESO MEDIO>");
@@ -61,11 +61,13 @@ class Bascula {
         arr=this.pesos;
         var avg = arr.reduce(function(p,c,i,a){return p + (c/a.length)},0);
         //console.log("El contador és: ", this.contador);    
-        //console.log("La media és:  ",avg);      
+        //console.log("La media és:  ",avg);   
+        return (avg);   
     }
     obtenerNumeroAnotaciones(){
         //console.log("Cantidad de anotaciones:")
         //console.log(this.contador);
+        return this.contador;
     }
     obtenerTablaPesosHTML() {
         let arr=[];
@@ -121,6 +123,7 @@ class Bascula {
     obtenerBascula(){
         //console.log("BasculaActual>")
         //console.log(basculaActual);
+        return basculaActual;
     }
 
     calcularIMC(){
@@ -131,9 +134,11 @@ class Bascula {
     describirIMC(){
         
         //console.log(this.imc)
+        return this.imc;
     }
     static describirIMC(){     
         //console.log(this.imc)
+        return this.imc;
     }
 
   
