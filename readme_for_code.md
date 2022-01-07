@@ -23,3 +23,6 @@ Package.json add lines :
     "description": "Línea per als tests de unitaris mochawesome",
     "test": "mocha test/unitarias test/integracion --reporter mochawesome"
   }, 
+
+  Descomentar los console.log para mostrar salida o no desde los test o ejecutando desde node.
+  //console.log();

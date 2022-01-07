@@ -7,7 +7,12 @@ var assert = require('chai').assert
 var expect = require('chai').expect;
 
 const Bascula = require('../appSalud/bascula.js').Bascula;
-
+describe('#Iniciando conjunto de tests.  # All mocha testfiles in tests/ directory:bascula.spec.js, paciente.spec.js, termometro.spec.js #Ejecutando los test preparados....', function() {
+  it('debería devolver -1 cuando inicio sin ningún problema', function() {
+    assert.equal([1,2,3].indexOf(4), -1)
+    
+  })
+})
 describe('#Iniciando los tests... #Testfile:bascula.spec.js #Ejecutando los test preparados....', function() {
   it('debería devolver -1 cuando inicio sin ningún problema', function() {
     assert.equal([1,2,3].indexOf(4), -1)
@@ -24,7 +29,7 @@ describe('-Generic test Bascula class', function() {
     })
 
     describe('Bascula Runner', function() {
-      //basculaTest.runner_bascula_actual;
+      basculaTest.runner_bascula_actual;
 
       it('*debería devolver -1 cuando se ejecutó la funcion runner de Bascula', function() {
             })
@@ -39,7 +44,7 @@ describe('-Generic test Bascula class', function() {
 
     describe('#Bascula funcion obtenerServidorPesosHTML', function() {
       //Esto solo sirve para testear si la funcion del metodo web es correcto
-      it('*Si se ejecuta el servidor HTTP se debería estár ejecutando en http://localhost:3000/ o bien en http://127.0.0.1:3000/,\n         retorna -1 cuando se ejecutó la funcion obtenerServidorPesosHTML() de Bascula \n        >>No se va a ejecutar el servidor HTTP según el fichero #Testfile:bascula.spec.js.', function() {
+      it('*Descomentar o comentar para poner en modo escucha *Si se ejecuta el servidor HTTP se debería estár ejecutando en http://localhost:3000/ o bien en http://127.0.0.1:3000/,\n         retorna -1 cuando se ejecutó la funcion obtenerServidorPesosHTML() de Bascula \n        >>No se va a ejecutar el servidor HTTP según el fichero #Testfile:bascula.spec.js.', function() {
         let numTesting;
         if(numTesting==0){
           console.log(">>Se va a ejecutar el servidor HTTP según el fichero #Testfile:bascula.spec.js.")
@@ -72,18 +77,12 @@ describe('-Generic test Bascula class', function() {
             })
     });
     describe('#Bascula funcion obtenerPesoMedio()', function() {
-      basculaTest.obtenerPesoMinimo();
+      basculaTest.obtenerPesoMedio();
       it('retorna -1 cuando se ejecutó la funcion obtenerPesoMedio() de Bascula', function() {
             //Descomentar/comentar si quieres que la funcion se ejecute en el test
             })
     });
-    describe('#Bascula funcion obtenerPesoMinimo()', function() {
-      basculaTest.obtenerPesoMinimo();
-
-      it('retorna -1 cuando se ejecutó la funcion saludar() de Bascula', function() {
-            //Descomentar/comentar si quieres que la funcion se ejecute en el test
-            })
-    });
+ 
     describe('#Bascula funcion obtenerNumeroAnotaciones()', function() {
       basculaTest.obtenerNumeroAnotaciones();
 
