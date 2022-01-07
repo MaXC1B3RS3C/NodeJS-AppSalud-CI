@@ -51,18 +51,18 @@ class Paciente{
     } 
 
     saludar(){
-        console.log("---------------------------------------")
-        console.log("--------- NUEVA PESADA ----------------")
-        console.log(this.peso);
-        console.log("KG.")
-        console.log("---------------------------------------")
-        console.log("Cantidad de pesadas anotadas:")
-        console.log(this.contador)
+        //console.log("---------------------------------------")
+        //console.log("--------- NUEVA PESADA ----------------")
+        //console.log(this.peso);
+        //console.log("KG.")
+        //console.log("---------------------------------------")
+        //console.log("Cantidad de pesadas anotadas:")
+        //console.log(this.contador)
 
     }   
     saludar(){
-        console.log("---------------------------------------")
-        console.log("Hi patient, "+this.nombre+this.apellido+" Welcome to the appSalud");
+        //console.log("---------------------------------------")
+        //console.log("Hi patient, "+this.nombre+this.apellido+" Welcome to the appSalud");
 
     }
     obtenerNombre(){
@@ -109,7 +109,7 @@ class Paciente{
         this.registroPaciente = this.registroPaciente;
     }
     obtenerPaciente(){
-        return console.log(pacienteActual)
+        return //console.log(pacienteActual)
     }
     calcularIMC(){
         this.imc=this.peso/(this.altura*this.altura);
@@ -120,13 +120,13 @@ class Paciente{
 function runner_paciente_actual(){
     edad_paciente_actual=pacienteActual.obtentenerEdad()
     pacienteActual.anotarPaciente("Juan Perico ","Delos Palotes",'05/12/1990',"80","1.89");
-    pacienteActual.saludar();
+    //pacienteActual.saludar();
     pacienteActual.anotarPaciente("Bartolo ","Escobar Altur",'10/12/1992',"78","1.86");
-    pacienteActual.saludar();
+    //pacienteActual.saludar();
     pacienteActual.anotarPaciente("Luis ","Martinez Soria",'12/12/1994',"75","1.80");
-    pacienteActual.saludar();
+    //pacienteActual.saludar();
     pacienteActual.anotarPaciente("Carlos ","Hernandez Garcia",'11/12/1985',"73","1.85");
-    pacienteActual.saludar();
+    //pacienteActual.saludar();
     pacienteActual.obtenerNombre();
     pacienteActual.obtenerApellido();
     pacienteActual.obtenerNombres();

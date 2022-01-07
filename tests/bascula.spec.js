@@ -24,7 +24,7 @@ describe('-Generic test Bascula class', function() {
     })
 
     describe('Bascula Runner', function() {
-      basculaTest.runner_bascula_actual;
+      //basculaTest.runner_bascula_actual;
 
       it('*debería devolver -1 cuando se ejecutó la funcion runner de Bascula', function() {
             })

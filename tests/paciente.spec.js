@@ -22,7 +22,7 @@ describe('-Generic test Paciente class', function() {
 
     describe('Paciente Runner', function() {
       it('*debería devolver -1 cuando se ejecutó la funcion runner de Paciente', function() {
-              pacienteTest.runner_bascula_actual;
+              //pacienteTest.runner_bascula_actual;
             })
     });
     describe('#Funcion anotarPaciente()', function() {

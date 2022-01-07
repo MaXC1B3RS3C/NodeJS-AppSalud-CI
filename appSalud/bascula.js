@@ -17,15 +17,15 @@ class Bascula {
         this.pesos.push(peso);       
     }     
     saludar(){
-        console.log("---------------------------------------")
+        //console.log("---------------------------------------")
 
-        console.log("Hola soy la bascula de appSalud.")
-        console.log("--------- NUEVA PESADA ----------------")
-        console.log(this.peso);
-        console.log("KG.")
-        console.log("---------------------------------------")
-        console.log("Cantidad de pesadas anotadas:")
-        console.log(this.contador)
+        //console.log("Hola soy la bascula de appSalud.")
+        //console.log("--------- NUEVA PESADA ----------------")
+        //console.log(this.peso);
+        //console.log("KG.")
+        //console.log("---------------------------------------")
+        //console.log("Cantidad de pesadas anotadas:")
+        //console.log(this.contador)
 
     } 
 
@@ -34,12 +34,12 @@ class Bascula {
     }
     obtenerPesoMaximo(){
     
-        console.log("PESO MÁXIMO>");
-        console.log("El contador és: ", this.contador);    
+        //console.log("PESO MÁXIMO>");
+        //console.log("El contador és: ", this.contador);    
         this.arr=[];
         this.arr=this.pesos;
         let max=basculaActual.getArrayMax(this.arr); //11         
-        console.log("El peso maximo és:  ",max);      
+        //console.log("El peso maximo és:  ",max);      
         //return Math.max(this.pesos);
 
     }
@@ -47,25 +47,25 @@ class Bascula {
         return Math.min.apply(null, this.arr);
     }
     obtenerPesoMinimo(){
-        console.log("PESO MÍNIMO>");
-        console.log("El contador és: ", this.contador);    
+        //console.log("PESO MÍNIMO>");
+        //console.log("El contador és: ", this.contador);    
         this.arr=[];
         this.arr=this.pesos;
         let min=basculaActual.getArrayMin(this.arr); //11         
-        console.log("El peso mínimo és:  ",min);      
+        //console.log("El peso mínimo és:  ",min);      
         //return Math.max(this.pesoss);
     }
     obtenerPesoMedio(){
-        console.log("PESO MEDIO>");
+        //console.log("PESO MEDIO>");
         var arr=[]
         arr=this.pesos;
         var avg = arr.reduce(function(p,c,i,a){return p + (c/a.length)},0);
-        console.log("El contador és: ", this.contador);    
-        console.log("La media és:  ",avg);      
+        //console.log("El contador és: ", this.contador);    
+        //console.log("La media és:  ",avg);      
     }
     obtenerNumeroAnotaciones(){
-        console.log("Cantidad de anotaciones:")
-        console.log(this.contador);
+        //console.log("Cantidad de anotaciones:")
+        //console.log(this.contador);
     }
     obtenerTablaPesosHTML() {
         let arr=[];
@@ -95,7 +95,7 @@ class Bascula {
         const server = http.createServer(onRequest);
         // Configurar una respuesta HTTP para todas las peticiones
         function onRequest(request, response) {
-            console.log("Peticion Recibida.");
+            //console.log("Peticion Recibida.");
             response.writeHead(200, {"Content-Type": "text/html"});
             response.write("PESOS:");
             var res;
@@ -109,9 +109,9 @@ class Bascula {
 
        // Escuchar al puerto 3000 creo otro falla por firewall o puertos por  defecto
        server.listen(port, host, () => {
-        console.log(`El servidor HTTP se está ejecutando en http://${host}:${port}`);
-        console.log("*El servidor HTTP se debería estár ejecutando en http://localhost:3000/");
-        console.log("**El servidor HTTP se debería estar ejecutando en http://127.0.0.1:3000/");
+        //console.log(`El servidor HTTP se está ejecutando en http://${host}:${port}`);
+        //console.log("*El servidor HTTP se debería estár ejecutando en http://localhost:3000/");
+        //console.log("**El servidor HTTP se debería estar ejecutando en http://127.0.0.1:3000/");
 
         });        // Poner un mensaje en la consola    
     }
@@ -119,8 +119,8 @@ class Bascula {
         this.registrosBascula = this.contador;
     }
     obtenerBascula(){
-        console.log("BasculaActual>")
-        console.log(basculaActual);
+        //console.log("BasculaActual>")
+        //console.log(basculaActual);
     }
 
     calcularIMC(){
@@ -130,10 +130,10 @@ class Bascula {
     }
     describirIMC(){
         
-        console.log(this.imc)
+        //console.log(this.imc)
     }
     static describirIMC(){     
-        console.log(this.imc)
+        //console.log(this.imc)
     }
 
   
@@ -142,13 +142,13 @@ class Bascula {
 
 function runner_bascula_actual(){
     basculaActual.anotarPeso(88,1.85,'20/12/2021');
-    basculaActual.saludar();
+   // basculaActual.saludar();
     basculaActual.anotarPeso(86,1.82,'5/12/2021');
-    basculaActual.saludar();
+   // basculaActual.saludar();
     basculaActual.anotarPeso(85,1.83,'7/12/2021');
-    basculaActual.saludar();
+   // basculaActual.saludar();
     basculaActual.anotarPeso(3,1.84,'10/12/2021');
-    basculaActual.saludar();
+   // basculaActual.saludar();
     basculaActual.obtenerPesoMaximo();
     basculaActual.obtenerPesoMinimo();
     basculaActual.obtenerPesoMedio();
