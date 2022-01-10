@@ -5,7 +5,7 @@ npm init
 npm install mocha chai --save-dev
 
 
-Package.json add lines :
+Package.json add lines : 
 
   "scripts": {
     "description": "Línea per als tests de mocha chai",
